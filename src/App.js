@@ -10,7 +10,7 @@ const App = () => {
   const [city, setCity] = useState("Prague");
   const [forecasts, setForecasts] = useState(null);
 
-  const fetchWeather = () => {
+  const fetchWeather = (city) => {
     fetch(
       "https://api.openweathermap.org/data/2.5/weather?q=" +
         city +
@@ -21,7 +21,7 @@ const App = () => {
       .then((data) => setWeather(data));
   };
 
-  const getForecast = () => {
+  const getForecast = (city) => {
     fetch(
       "https://api.openweathermap.org/data/2.5/forecast?q=" +
         city +
@@ -35,8 +35,8 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchWeather();
-    getForecast();
+    fetchWeather(city);
+    getForecast(city);
   }, [city]);
 
   /*
