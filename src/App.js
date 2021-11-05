@@ -30,11 +30,9 @@ const App = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.list);
         setForecasts(getFiveForecasts(data.list));
       });
   };
-  console.log(forecasts);
 
   useEffect(() => {
     fetchWeather(city);
