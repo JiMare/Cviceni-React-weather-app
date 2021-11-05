@@ -31,7 +31,7 @@ export const getFormatDate = (timestamp) => {
     ", " +
     dateObject.getDate() +
     " " +
-    months[dateObject.getMonth() - 1]
+    months[dateObject.getMonth()]
   );
 };
 
