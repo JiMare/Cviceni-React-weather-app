@@ -14,20 +14,20 @@ const months = [
 ];
 
 const days = [
+  "Sunday",
   "Monday",
   "Tuesday",
   "Wednesday",
   "Thursday",
   "Friday",
   "Saturday",
-  "Sunday",
 ];
 
 export const getFormatDate = (timestamp) => {
   const milliseconds = timestamp * 1000;
   const dateObject = new Date(milliseconds);
   return (
-    days[dateObject.getDay() - 1] +
+    days[dateObject.getDay()] +
     ", " +
     dateObject.getDate() +
     " " +
@@ -42,5 +42,5 @@ export const formatTime = (timestamp) => {
 };
 
 export const getFiveForecasts = (arr) => {
-  return arr.filter((e, index) => index % 8 === 0);
+  return arr.filter((e, index) => (index + 1) % 8 === 0);
 };
