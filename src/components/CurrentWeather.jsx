@@ -11,7 +11,7 @@ export const CurrentWeather = ({ weather, city }) => {
       }
     >
       <h2 className="weather__city" id="mesto">
-        {city}, Country
+        {city}, {weather?.sys.country}
       </h2>
       <div className="weather__inner weather__inner--center">
         <div className="weather__section weather__section--temp">
