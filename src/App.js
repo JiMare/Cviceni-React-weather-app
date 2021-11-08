@@ -70,8 +70,8 @@ const App = () => {
         </div>
 
         <div className="weather">
-          <div className="button-group">
-            {/* <button className="button" onClick={handleButtonClick}>
+        {/* <div className="button-group">
+             <button className="button" onClick={handleButtonClick}>
               Prague
             </button>
              <button className="button" onClick={handleButtonClick}>
@@ -79,8 +79,8 @@ const App = () => {
             </button>
             <button className="button" onClick={handleButtonClick}>
               Tenerife
-            </button> */}
-          </div>
+            </button> 
+          </div>*/}
           <CurrentWeather weather={weather} city={city} />
           <div className="weather__forecast" id="predpoved">
             {forecasts?.map((forecast, index) => (
