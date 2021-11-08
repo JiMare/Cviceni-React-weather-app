@@ -35,10 +35,17 @@ export const getFormatDate = (timestamp) => {
   );
 };
 
+const addZero = (i) => {
+  if(i < 10){
+    i = "0" + i;
+  }
+  return i;
+} 
+
 export const formatTime = (timestamp) => {
   const milliseconds = timestamp * 1000;
   const dateObject = new Date(milliseconds);
-  return dateObject.getHours() + ":" + dateObject.getMinutes();
+  return addZero(dateObject.getHours()) + ":" + addZero(dateObject.getMinutes());
 };
 
 export const getFiveForecasts = (arr) => {
